@@ -29,4 +29,4 @@ public class optpembanding {
         System.out.println("Apakah"+b+"** "+ a +"? jawabannya " + ff);
     }
 }
-
+/**Pertemuan 2 */

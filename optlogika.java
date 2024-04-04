@@ -32,4 +32,4 @@ public class optlogika {
         System.out.println("!false= " + (!false));
     }
 }
-
+/**Pertemuan 2 */

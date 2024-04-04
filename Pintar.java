@@ -14,3 +14,4 @@ System.out.println("Panggil X :"+panggil.x);
 System.out.println("Panggil Y :"+panggil.y);
 }    
 }
+/**Pertemuan 2 */

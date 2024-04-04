@@ -22,3 +22,4 @@ package pewarisan;
        
     }    
 }
+/**Pertemuan 2 */

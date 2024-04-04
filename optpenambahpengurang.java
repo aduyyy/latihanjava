@@ -24,4 +24,4 @@ public class optpenambahpengurang {
         System.out.println("Nilai B = " +b);
     }
 } 
-
+/**Pertemuan 2 */

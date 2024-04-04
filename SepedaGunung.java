@@ -17,3 +17,4 @@ package pewarisan;
        System.out.println("Tinggi Sadel:"+setSadel);
 }
 }
+/**Pertemuan 2 */
