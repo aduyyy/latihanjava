@@ -2,7 +2,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /*
@@ -15,7 +14,7 @@ import java.util.Date;
  * @author usER
  */
 public class LatSoalArray {
-   public static void main(String[] args)throws IOException
+    public static void main(String[] args)throws IOException
     {
         InputStreamReader Keyreader = new InputStreamReader(System.in);
         BufferedReader input = new BufferedReader(Keyreader);
