@@ -15,63 +15,70 @@ import java.util.Date;
  * @author usER
  */
 public class LatSoalArray {
-    public static void main(String[] args) throws IOException {
+   public static void main(String[] args)throws IOException
+    {
         InputStreamReader Keyreader = new InputStreamReader(System.in);
         BufferedReader input = new BufferedReader(Keyreader);
-        int i, jumlah_data;
+
+        int i,j;
         double total=0;
-        String nama;
-        String[] nama_barang = new String[10];
-        String[] kode = new String[10];
-        int[] jumlah_brg = new int[10];
-        int[] harga = new int[10];
-        double[] total_hrg = new double [10];
-        
-        Date HariSekarang = new Date();
-        SimpleDateFormat ft = new SimpleDateFormat ("dd-MM-yyyy");
-        
-        System.out.println("\tPT PERMATA PRATAMA");
-        System.out.println("+++++++++++++++++++++++++++++++++++");
-        System.out.print("Masukkan Nama Petugas : ");
-        nama = input.readLine();
-        System.out.print("\nMasukkan Jumlah Data : "); 
-        jumlah_data = Integer.parseInt(input.readLine());
-        System.out.println("-----------------------------------");
-        
-        for (i = 1; i <= jumlah_data; i++){
-            System.out.println("\nData ke - " + i);
-            System.out.print("Kode Barang : "); kode[i]=input.readLine();
-            System.out.print("Jumlah Beli : "); jumlah_brg[i]=Integer.parseInt(input.readLine());
-            System.out.println("");
-            if (kode[i].equalsIgnoreCase("P001")) {
-                nama_barang[i] = "Printer  ";
-                harga[i] = 700000;
+        String[]nama,petugas,kode, tanggal;
+        int[]jumbel;
+        double[]harga,tothar;
+        nama = new String[11];
+        petugas = new String[20];
+        jumbel = new int[10];
+        kode = new String[4];
+        harga = new double[10];
+        tothar = new double[10];
+        tanggal = new String[10];
+
+        System.out.println("\n                                           PT.PERMATA \"PRATAMA\"");
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        System.out.print("Nama Petugas    : "); petugas[0] = input.readLine();              
+        System.out.print("Tanggal         : "); tanggal[0] = input.readLine();               
+        System.out.print("\nJumlah Data Yang akan dimasukkan :"); j=Integer.parseInt(input.readLine());
+        System.out.println("-----------------------------------------------------------------------------------------------------------");
+        for (i=1;i<=j;i++)
+        {
+        System.out.println("        Data Ke-                 : "+i);
+        System.out.println("        Kode Barang              : "); kode[i]= input.readLine();
+        System.out.println("        Jumlah                   : "); jumbel[i]= Integer.parseInt(input.readLine());
+        System.out.println("    --------------------------------------------------------------------------------------------");
+            if(kode[i].equalsIgnoreCase("P001")) {
+                nama[i]= "Printer    ";
+                harga[i]= 700000;
             }
-            else if (kode[i].equalsIgnoreCase("V001")) {
-                nama_barang[i] = "VGA Card ";
-                harga[i] = 750000;
+            else if(kode[i].equalsIgnoreCase("V001")){
+                nama[i]= "VGA Card   ";
+                harga[i]= 75000;
+            }
+            else if(kode[i].equalsIgnoreCase("M001")){
+                nama[i]= "Motherboard";
+                harga[i]= 950000;
             }
             else {
-                nama_barang[i] = "Motherboard";
-                harga[i] = 950000;
+                nama [i] = "Kode Tidak Tersedia";
+                harga [i] = 0;
             }
-            
-            total_hrg[i]=harga[i]*jumlah_brg[i];
-            total += total_hrg[i];
+            tothar[i]=harga[i]*jumbel[i];
+            total=total+tothar[i];
         }
-        
-        System.out.println("\t\t\t\t\t\tPT PERMATA PRATAMA");
-        System.out.println("+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +");
-        System.out.println("Nama Petugas \t\t\t: " + nama + "\t\t\t\t\t\tTanggal : " + ft.format(HariSekarang));
-        System.out.println("Jumlah Data yg Dimasukkan \t: " + jumlah_data);
-        System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
-        System.out.println("Data Ke" + "\t\tKode Barang" + "\tNama Barang" + "\t\tHarga Barang" + "\t  Jumlah Barang" + "\t\tTotal Harga");
-        for (i = 1; i <= jumlah_data; i++){
-            System.out.println("   " + i + "\t\t" + kode[i] + "\t\t" + nama_barang[i] + "\t\t" + harga[i] + "\t\t\t" + jumlah_brg[i] + "\t\t" + total_hrg[i]);
+
+        System.out.println("\n                                         PT.PERMATA \"PRATAMA\"");
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        System.out.println("Nama Petugas                : " + petugas[0] + "\t\t Tanggal : " + tanggal[0]);
+        System.out.println("Jumlah Data yang di masukan :" + j );
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        System.out.println("Data Ke \tKode Barang \tNama Barang \t\tHarga Barang \tJumlah Barang \t\tTotal Harga");
+        System.out.println("\n--------------------------------------------------------------------------------------------------------");
+        for(i=1;i<=j;i++) {
+        System.out.println(i+"\t\t"+kode[i]+"\t\t"+nama[i]+"\t\t"+harga[i]+"\t\t"+jumbel[i]+"\t\t"+tothar[i]);
         }
-        System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
-        
-        System.out.printf("Total Pendapatan Pada tanggal " + ft.format(HariSekarang) + " adalah sebesar Rp. " + total);
+        System.out.println("\n--------------------------------------------------------------------------------------------------------");
+        System.out.println("Total Pendapatan Pada tanggal" +tanggal[0] + "adalah sebesar Rp." +total);
+
+
     }
+
 }
-    
